@@ -1,43 +1,17 @@
-body {
-    background: linear-gradient(to right, #CBCE91FF, #EA738DFF);
+table {
+    border-collapse: collapse;
 }
 
-.main-text {
-    font-weight: bold;
+td {
+    padding : 5px 10px;
     text-align: center;
 }
 
-.entire-container {
-    margin-top: 5%;
-    text-align: center;
+input {
+    text-align: right;
+    border : none;
 }
 
-#result::placeholder {
-    font-weight: bolder;
-}
-
-#result {
-    text-align: center;
-    font-size : 25px;
-    background-color: white;
-    border-radius: 3px;
-    height: 100px;
-    width : 35%;
-}
-
-.sign {
-    color : black;
-    background-color: #ffffff;
-    font-size : 20px;
-    font-weight: bold;
-    width: 100px;
-    height: 60px;
-}
-
-#special-key {
-    color : #66ff66;
-    font-size : 20px;
-    background-color : #e600e6;
-    width : 125px;
-    height: 60px;
+input:focus {
+    outline : none;
 }

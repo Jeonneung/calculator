@@ -1,6 +1,16 @@
-const result_container = document.getElementById("result");
-const btn = document.querySelectorAll(".sign");
+function add(char) {
+    const display = document.getElementById("display");
 
-function handleNumber() {
-    result_container.value = btn.value;
+    display.value = display.value + char;
+}
+
+function calculate() {
+    const display = document.getElementById('display');
+    let result = eval(display.value);
+    document.getElementById('result').value = result;
+}
+
+function reset() {
+    document.getElementById('display').value = "";
+    document.getElementById('result').value = "";
 }

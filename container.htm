@@ -8,36 +8,45 @@
     <title>Calculator</title>
 </head>
 <body>
-    <h1 class="main-text">계산기</h1>
-    <div class="entire-container">
-        <div class="reuslt-container">
-            <input type='text' id="result" placeholder="Result">
-        </div>
-        <div class="calculate-container">
-            <button type="button" id="special-key" value="AC">AC</button>
-            <button type="button" class="sign" value="DEL" onclick="handleNumber()">DEL</button>
-            <button type="button" class="sign" value="/" onclick="handleNumber()">/</button>
-            <br>
-            <button type="button" class="sign" value="1" onclick="handleNumber()">1</button>
-            <button type="button" class="sign" value="2" onclick="handleNumber()">2</button>
-            <button type="button" class="sign" value="3" onclick="handleNumber()">3</button>
-            <button type="button" class="sign" value="*" onclick="handleNumber()">*</button>
-            <br>
-            <button type="button" class="sign" value="4" onclick="handleNumber()">4</button>
-            <button type="button" class="sign" value="5" onclick="handleNumber()">5</button>
-            <button type="button" class="sign" value="6" onclick="handleNumber()">6</button>
-            <button type="button" class="sign" value="+" onclick="handleNumber()">+</button>
-            <br>
-            <button type="button" class="sign" value=7 onclick="handleNumber()">7</button>
-            <button type="button" class="sign" value="8" onclick="handleNumber()">8</button>
-            <button type="button" class="sign" value="9" onclick="handleNumber()">9</button>
-            <button type="button" class="sign" value="-" onclick="handleNumber()">-</button>
-            <br>
-            <button type="button" class="sign" value="." onclick="handleNumber()">.</button>
-            <button type="button" class="sign" value="0" onclick="handleNumber()">0</button>
-            <button type="button" id="special-key" value="=" onclick="handleNumber()">=</button>
-        </div>
-    </div>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="display">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="result">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" onclick="reset()">AC</td>
+            <td onclick="add('/')">/</td>
+        </tr>
+        <tr>
+            <td onclick="add(7)">7</td>
+            <td onclick="add(8)">8</td>
+            <td onclick="add(9)">9</td>
+            <td onclick="add('*')">*</td>
+        </tr>
+        <tr>
+            <td onclick="add(4)">4</td>
+            <td onclick="add(5)">5</td>
+            <td onclick="add(6)">6</td>
+            <td onclick="add('-')">-</td>
+        </tr>
+        <tr>
+            <td onclick="add(1)">1</td>
+            <td onclick="add(2)">2</td>
+            <td onclick="add(3)">3</td>
+            <td onclick="add('+')">+</td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="add(0)">0</td>
+            <td onclick="add('.')">.</td>
+            <td onclick="calculate()">=</td>
+        </tr>
+    </table>    
     <script src="index.js"></script>
 </body>
 </html>
