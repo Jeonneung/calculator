@@ -9,44 +9,56 @@
 </head>
 <body>
     <table border="1">
-        <tr>
-            <td colspan="4">
-                <input type="text" id="display">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="4">
-                <input type="text" id="result">
-            </td>
-        </tr>
-        <tr>
-            <td colspan="3" onclick="reset()">AC</td>
-            <td onclick="add('/')">/</td>
-        </tr>
-        <tr>
-            <td onclick="add(7)">7</td>
-            <td onclick="add(8)">8</td>
-            <td onclick="add(9)">9</td>
-            <td onclick="add('*')">*</td>
-        </tr>
-        <tr>
-            <td onclick="add(4)">4</td>
-            <td onclick="add(5)">5</td>
-            <td onclick="add(6)">6</td>
-            <td onclick="add('-')">-</td>
-        </tr>
-        <tr>
-            <td onclick="add(1)">1</td>
-            <td onclick="add(2)">2</td>
-            <td onclick="add(3)">3</td>
-            <td onclick="add('+')">+</td>
-        </tr>
-        <tr>
-            <td colspan="2" onclick="add(0)">0</td>
-            <td onclick="add('.')">.</td>
-            <td onclick="calculate()">=</td>
-        </tr>
-    </table>    
+        <!-- 테이블에 외곽 테두리를 만듭니다. -->
+            <tr>
+            <!-- tr은 table row(열)의 약자로 가로 열을 만듭니다. -->
+                <td colspan="4">
+                <!-- td는 table data의 약자로 tr안에 들어갈 데이터를 만듭니다. -->
+                <!-- 셀 4칸을 가로로 병합합니다. -->
+                    <input type="text" id="display" onkeypress="keyevent(this)">
+                    <!-- 텍스트 입력 위 한 줄의 입력 필드(field)를 정의합니다. -->
+                </td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="result">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" onclick="reset()">AC</td>
+                <!-- onclick은 해당 Element를 눌렀을 때 실행되야할 코드를 실행시켜줌. -->
+                <!-- 실행되어야할 코드는 index.js파일에서 function(함수)로 정의해준다. -->
+                <!-- 실행될 함수는 reset함수가 되는것이다. -->
+                <td onclick="add('/')">/</td>
+                <!-- 실행된 함수는 add함수 -->
+                <!-- add 뒤에 붙여진 것은 argument(매개변수)이다. -->
+                <!-- add 함수의 argument는 문자열 /이다. (''는 문자열을 나타내는 코드이다.)-->
+            </tr>
+            <tr>
+                <td onclick="add(7)">7</td>
+                <!-- 이 코드에서 add함수의 argument는 숫자 7이다. because, ''이 없기 때문 -->
+                <td onclick="add(8)">8</td>
+                <td onclick="add(9)">9</td>
+                <td onclick="add('*')">*</td>
+            </tr>
+            <tr>
+                <td onclick="add(4)">4</td>
+                <td onclick="add(5)">5</td>
+                <td onclick="add(6)">6</td>
+                <td onclick="add('-')">-</td>
+            </tr>
+            <tr>
+                <td onclick="add(1)">1</td>
+                <td onclick="add(2)">2</td>
+                <td onclick="add(3)">3</td>
+                <td onclick="add('+')">+</td>
+            </tr>
+            <tr>
+                <td colspan="2" onclick="add(0)">0</td>
+                <td onclick="add('.')">.</td>
+                <td onclick="calculate()">=</td>
+            </tr>
+        </table>
     <script src="index.js"></script>
 </body>
 </html>

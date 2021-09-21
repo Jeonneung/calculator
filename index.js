@@ -14,3 +14,9 @@ function reset() {
     document.getElementById('display').value = "";
     document.getElementById('result').value = "";
 }
+
+function keyevent() {
+    if(window.event.keyCode==13) {
+        calculate();
+    }
+}
