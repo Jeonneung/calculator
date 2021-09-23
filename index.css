@@ -1,24 +1,36 @@
+html {
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 table {
-    margin : auto;
-    width : 22%;
-    height: 400px;
-    border-collapse: collapse;
-    /* 테이블 셀 사이의 간격을 없앤다. */
+  margin: auto;
+  width: 22%;
+  height: 400px;
+  border-collapse: collapse;
+
+  /* 테이블 셀 사이의 간격을 없앤다. */
 }
 
 td {
-    padding : 5px 10px;
-    text-align: center;
+  padding: 5px 10px;
+  text-align: center;
 }
 
 input {
-    text-align: right;
-    border : none;
-    width: 90%;
-    padding: 10px;
-    margin: 0px;
+  text-align: right;
+  border: none;
+  width: 90%;
+  padding: 10px;
+  margin: 0px;
 }
 
 input:focus {
-    outline : none;
+  outline: none;
 }
